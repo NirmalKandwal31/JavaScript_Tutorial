@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling</title>
+  <p>
+    When an event happens on an element, it first runs the handlers on it,
+     then on its parent, then all the way up on other ancestors.
+  </p>
+</head>
+
+<body>
+  <script>
+    const num = 10;
+    function sum() {
+      document.writeln(num + num);
+    }
+    sum()
+  </script>
+
+</body>
+
+</html>

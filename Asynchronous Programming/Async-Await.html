@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async-Await</title>
+    <p>Async and await Example</p>
+</head>
+
+<body>
+    <script>
+    const message = async function() {  
+        document.write("Async Function will wait promise to be get resolved first and then normal function will be called");
+        await message1();
+        message2()
+    }     
+    const message1 =  function() {  
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                document.write("Promise function");
+                resolve()
+            },3000);
+        })
+    } 
+    const message2=function(){
+        document.write("Normal Function");
+    }
+    message();
+</script>
+</body>
+
+</html>

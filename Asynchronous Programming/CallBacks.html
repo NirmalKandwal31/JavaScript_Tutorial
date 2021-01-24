@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Backs</title>
+    <p>A callback is a function passed as an argument to another function.</p>
+</head>
+
+<body>
+    <script>
+    const message = function() {  
+        document.write("This message is shown after 3 seconds");
+    }     
+    setTimeout(message, 3000);
+    //This message will get printed first and will not wait for above mesage to get executed first
+    const message2=function(){
+        document.write("This message is not call back function");
+    }
+    message2();
+</script>
+</body>
+
+</html>

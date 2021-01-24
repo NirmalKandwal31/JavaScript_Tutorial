@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+    <p>In JavaScript, we need closures when a variable
+        which is defined outside the scope in reference is accessed from some inner scope.</p>
+    <script>
+        function show() {
+            var i = "i is the Local Variable for outer function";
+            document.write("<br>")
+            document.write(i);
+            function display() {
+                var j = "j is the Local Variable for inner function";
+                document.write("<br>")
+                document.write(j);
+                document.write(i);
+
+            }
+            display();
+            document.write(j);// this will give the erro
+
+        }
+
+
+        show();
+
+    </script>
+
+</body>
+
+</html>
